@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CitiesGame</string>
+    <string name="game_input_hint">Введите название города</string>
+    <string name="game_button_ok_title">OK</string>
+
+    <string name="game_state_win">Вы победили!</string>
+    <string name="game_state_wrong_answer">В моей базе нет такого города</string>
+    <string name="game_state_answer_accepted">Ответ принят! Думаю</string>
+    <string name="game_state_already_used">Уже было!</string>
+</resources>
