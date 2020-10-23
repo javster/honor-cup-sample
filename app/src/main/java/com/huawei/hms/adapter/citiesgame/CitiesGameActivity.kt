@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class CitiesGameActivity : AppCompatActivity() {
 
     private val viewModel by viewModels<GameViewModel>()
 
@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         viewModel.result.observe(this) {
             when (it) {
                 GameViewModel.Result.UserWin -> toast(getString(R.string.game_state_win))
-                GameViewModel.Result.AnswerIncorrect -> inputLayout.error = getString(R.string.game_state_wrong_answer)
                 GameViewModel.Result.AnswerCorrect -> toast(getString(R.string.game_state_answer_accepted))
+                GameViewModel.Result.AnswerIncorrect -> inputLayout.error = getString(R.string.game_state_wrong_answer)
                 GameViewModel.Result.AlreadyUsed -> inputLayout.error = getString(R.string.game_state_already_used)
             }
         }
